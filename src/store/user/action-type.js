@@ -1,0 +1,4 @@
+export default {
+  SAVEUSER:'SAVEUSER',
+  CLEARUSER:'CLEARUSER'
+}
