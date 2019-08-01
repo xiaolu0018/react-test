@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+### create-react-app + redux + router + less + mock-api + axios
+
+### 包括路由权限，视图权限
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -74,4 +76,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 =======
 # react-test
 create-react+redux+router+mock-api+axios
->>>>>>> 8dcf1a46887784bace9af6a461fdc8628696b8b9
