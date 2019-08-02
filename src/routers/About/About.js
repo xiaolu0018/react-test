@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveUser, clearUser } from '@/store/user/action.js'
 import { Icon,Modal } from 'antd'
+import './About.less'
+import '@/assets/icon/iconfont.css'
 const IconFont = Icon.createFromIconfontCN({
   scriptUrl: '/icon/iconfont.js',
   extraCommonProps:{
-    color:'red'
+    color:'red',
+    fill:'inherit',
+    stroke:'inherit'
   }
 });
 class About extends Component {
@@ -27,7 +31,8 @@ class About extends Component {
   render() {
     return (
       <div>
-        <IconFont style={{fontSize:'30px',color:'red'}} type="el-cloud-forbidden"></IconFont>
+        <i className="el-cloud-jiekou" style={{color:'red'}}></i>
+        <IconFont style={{fontSize:'30px',color:'red'}} type="el-cloud-jiekou"></IconFont>
         <div>用户名：{this.props.user.name}</div>
         <div>联系方式：{this.props.user.phone}</div>
         {this.Auth('about:btn') ? <button>权限按钮</button> : null }
