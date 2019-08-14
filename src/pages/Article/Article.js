@@ -16,7 +16,7 @@ export default class Article extends Component {
     this.initPage()
   }
   initPage = async () => {
-    console.log(this.props.history.push('/home/article/2'))//路由跳转
+    console.log(this.props.history.push('/article/2'))//路由跳转
     console.log('文章页面渲染')
   }
   changeTab = activeKey => {

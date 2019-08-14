@@ -5,9 +5,12 @@ export default class Home extends Component {
     list: [],
     name: ''
   }
-  async componentDidMount() {
+  componentDidMount() {
+    this.init();
+  }
+  init = async () => {
     console.log(this.context.router)
-    let res = await this.http(this.url.test2, {});
+    let res = await this.http(this.url.test2, {})
     if (res.success) {
       this.setState({
         list: res.dataList,
@@ -32,28 +35,24 @@ export default class Home extends Component {
             header={<div>列表数据展示 - {this.state.name}</div>}
             footer={<div>列表尾部</div>}
             dataSource={this.state.list}
-            renderItem={item => (<List.Item
-              key={item.id}
-              extra={
-                <img
-                  width={272}
-                  alt="logo"
-                  src={item.url}
+            renderItem={item => (
+              <List.Item
+                key={item.id}
+                extra={<img width={272} alt="logo" src={item.url} />}
+              >
+                <List.Item.Meta
+                  avatar={
+                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                  }
+                  title={<a href="test.url.list">{item.pna}</a>}
+                  description={item.rx}
                 />
-              }
-            >
-              <List.Item.Meta
-                avatar={<Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
-                title={<a href='test.url.list'>{item.pna}</a>}
-                description={item.rx}
-              />
-              {item.time}
-            </List.Item>)}
-          >
-          </List>
+                {item.time}
+              </List.Item>
+            )}
+          />
         </ul>
       </div>
     )
   }
 }
-

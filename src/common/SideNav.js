@@ -12,7 +12,6 @@ class SideNav extends Component {
   }
   componentDidMount() {
     // 监听路由变化
-    // console.log(this.props.history.location.pathname)
     //初始化
     this.setState({
       current: this.props.history.location.pathname.split('/').pop()
@@ -24,6 +23,9 @@ class SideNav extends Component {
         current: route.pathname.split('/').pop()
       })
     })
+  }
+  componentWillUnmount(){
+    this.setState = () => {}
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     // console.log(prevProps);
@@ -43,23 +45,23 @@ class SideNav extends Component {
         <Menu.Item key="home">
           <Icon type="desktop" />
           <span>首页</span>
-          <Link to="/home"></Link>
+          <Link to="/" />
         </Menu.Item>
         <Menu.Item key="about">
           <Icon type="user" />
           <span>关于我</span>
-          <Link to="/home/about"></Link>
+          <Link to="/about" />
         </Menu.Item>
         <Menu.Item key="article">
           <Icon type="team" />
           <span>内容</span>
-          <Link to="/home/article"></Link>
+          <Link to="/article" />
         </Menu.Item>
         {this.Auth('resource:list') ? (
           <Menu.Item key="resource">
             <Icon type="file" />
             <span>资源</span>
-            <Link to="/home/resource"></Link>
+            <Link to="/resource" />
           </Menu.Item>
         ) : null}
       </Menu>

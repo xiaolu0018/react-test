@@ -42,7 +42,7 @@ class MyForm extends Component {
       this.props.form.getFieldsValue()
     )
     if (res.success) {
-      this.props.history.push('/home/article/45444')
+      this.props.history.push('/article/45444')
     } else {
       Modal.warning({
         title: '提示',

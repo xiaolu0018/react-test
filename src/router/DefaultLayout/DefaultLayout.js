@@ -4,7 +4,7 @@ import SideNav from '@/common/SideNav'
 // import styles from './DefaultLayout.module.less'
 import { Layout } from 'antd'
 
-import { Route, Switch } from 'react-router-dom'
+import {  Switch,Route } from 'react-router-dom'
 import AuthRoute from '@/components/AuthRoute.js'
 
 import loadable from '@/components/loadable.js'
@@ -39,17 +39,26 @@ export default class DefaultLayout extends Component {
           </Sider>
           <Content className="content-wrap scrollbar">
             <Switch>
-              <Route path={this.props.match.url + '/'} component={Home} exact />
-              <Route path={this.props.match.url + '/about'} component={About} />
-              <Route
-                path={this.props.match.url + '/article'}
+              <AuthRoute
+                path={this.props.match.url}
+                component={Home}
+                exact
+              />
+              {/* <Route path={this.props.match.url} component={Home} exact /> */}
+              <AuthRoute
+                path={this.props.match.url + 'about'}
+                component={About}
+              />
+              {/* <Route path={this.props.match.url+'article'} component={Article}  /> */}
+              <AuthRoute
+                path={this.props.match.url + 'article'}
                 component={Article}
               />
               {/* <Route path={this.props.match.url+'/resource'} component={Resource}  /> */}
               {/* 权限 */}
               <AuthRoute
                 authKey="resource:list"
-                path={this.props.match.url + '/resource'}
+                path={this.props.match.url + 'resource'}
                 component={Resource}
               />
             </Switch>
