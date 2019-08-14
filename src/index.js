@@ -12,7 +12,7 @@ import { LocaleProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import Auth from './utils/Auth.js';
+import Auth from '@/assets/utils/Auth.js';
 moment.locale('zh-cn');
 
 

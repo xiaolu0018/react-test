@@ -6,9 +6,9 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import loadable from '@/components/loadable.js';
 
 
-const DefaultLayout = loadable(() => import('@/layouts/DefaultLayout/DefaultLayout.js'));
-const LoginUser = loadable(() => import('@/layouts/LoginUser/LoginUser.js'));
-const NoMatch = loadable(() => import('@/layouts/NoMatch.js'));
+const DefaultLayout = loadable(() => import('./DefaultLayout/DefaultLayout.js'));
+const LoginUser = loadable(() => import('./LoginUser/LoginUser.js'));
+const NoMatch = loadable(() => import('./NoMatch.js'));
 export default class RouterWrap extends Component {
   render() {
     return (

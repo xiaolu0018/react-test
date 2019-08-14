@@ -6,7 +6,7 @@ import { Spin  } from 'antd';
 const loadingComponent = () => {
     return (
         <div>
-          <Spin/>
+          <Spin tip="加载中"/>
         </div>
     )
 }

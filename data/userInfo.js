@@ -2,7 +2,7 @@ module.exports = (req, res) => {
   return res.json({
     dataList: null,
     success: true,
-    message: null,
+    message: 'NO_LOGIN',
     data: {
       name:'test0007',
       userId:'307',

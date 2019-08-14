@@ -3,7 +3,8 @@ import types from './action-type.js'
 //init state default
 const defaultState = {
   name:'',
-  userId:''
+  userId:'',
+  phone:''
 }
 
 
@@ -14,7 +15,7 @@ export default (state = defaultState , action = {}) => {
     case types.SAVEUSER:
       return {...state, ...action.userInfo};
     case types.CLEARUSER:
-      return {...state, ...defaultState};
+      return defaultState;
     default:
       return state;
   }

@@ -9,10 +9,10 @@ import AuthRoute from '@/components/AuthRoute.js'
 
 import loadable from '@/components/loadable.js'
 const { Header, Sider, Content } = Layout
-const Home = loadable(() => import('@/routers/Home/Home.js'))
-const About = loadable(() => import('@/routers/About/About.js'))
-const Article = loadable(() => import('@/routers/Article/Article.js'))
-const Resource = loadable(() => import('@/routers/Resource/Resource.js'))
+const Home = loadable(() => import('@/pages/Home/Home.js'))
+const About = loadable(() => import('@/pages/About/About.js'))
+const Article = loadable(() => import('@/pages/Article/Article.js'))
+const Resource = loadable(() => import('@/pages/Resource/Resource.js'))
 
 export default class DefaultLayout extends Component {
   state = {
