@@ -15,9 +15,9 @@ export default class RouterWrap extends Component {
       <div className="divflow">
         <HashRouter>
           <Switch>
-            <Route path="/login" component={LoginUser}  exact/>
+            <Route path="/login" component={LoginUser} exact />
+            <Route path="/404" component={NoMatch} exact />
             <Route path="/" component={DefaultLayout} />
-            <Route path="/404" component={NoMatch} />
             <Redirect from="*" to="/404" />
           </Switch>
         </HashRouter>
